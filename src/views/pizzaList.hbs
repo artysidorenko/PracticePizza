@@ -1,0 +1,17 @@
+<section class="main__container main__container--background-image">
+  <ul class="pizzas__list">
+
+    {{#each pizzas}}
+
+    <li class="pizzas__item">
+      <a href="/pizza/{{this.name}}" class="pizzas__link pizzas__item--hover">
+        <h1 class="pizzas__title">{{this.name}}</h1>
+        <p class="pizzas__description">{{this.description}}</p>
+        <img class="pizzas__image" src="{{this.photoUrl}}" alt="{{this.name}} stock photo" />
+      </a>
+    </li>
+
+    {{/each}}
+
+  </ul>
+</section>
