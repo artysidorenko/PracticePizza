@@ -12,17 +12,36 @@ body {
 .navbar__nav {
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
+  display: flex;
+  padding: 0px 30px;
 }
 
 .navbar__logo {
   width: 40px;
   height: 40px;
-  margin-right: 10px;
+  align-self: center;
 }
 
 .navbar__list {
   display: flex;
   list-style-type: none;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar__list {
+    flex-wrap: wrap;
+  }
+  .navbar__logo {
+    align-self: auto;
+    position: absolute;
+    top: 35px;
+    left: 40px;
+  }
+}
+
+.navbar__icon {
+  margin: 10px;
+  font-size: large;
 }
 
 .navbar__item {
@@ -63,6 +82,13 @@ body {
   left: 0;
   margin: 25px;
   z-index: -100;
+}
+
+@media screen and (max-width: 850px) {
+  .main__container--background-image:after {
+    content: "";
+    opacity: 0;
+  }
 }
 
 .main__title--padded {
@@ -110,7 +136,7 @@ body {
 }
 
 .pizzas__description {
-  height: 85px;
+  min-height: 85px;
   display: block;
 }
 
