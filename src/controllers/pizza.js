@@ -1,10 +1,6 @@
 const { Pizza } = require('../model');
 
-exports.get = (req, res) => {
-  res.render('addPizza');
-};
-
-exports.post = {
+module.exports = {
   addPizza(req, res) {
     return Pizza
       .create({

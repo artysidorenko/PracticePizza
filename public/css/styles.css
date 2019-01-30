@@ -156,6 +156,44 @@ body {
 
 }
 
+/* NEW PIZZA FORM STYLING */
+
+.form__container {
+  display: block;
+}
+
+.form__input {
+  display: block;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  width: 200px;
+}
+
+.form__textarea {
+  display: block;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 10px;
+  font-family: inherit;
+  border: 1px solid grey;
+}
+
+.form__button {
+  display: block;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 10px;
+  font-family: inherit;
+  border: 1px solid grey;
+  color: rgb(247, 231, 242);
+  background-color: rgb(92, 84, 84);
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
 /* FOOTER STYLING */
 
 .footer {

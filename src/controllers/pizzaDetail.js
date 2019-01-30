@@ -1,5 +1,5 @@
-const pizzas = require('./../model/modelIndex');
-const recipes = require('./../model/modelRecipes');
+const pizzas = require('./../../public/pizzaStatic');
+const recipes = require('./../../public/recipe');
 
 exports.get = (req, res) => {
   const reqPizzaName = req.params.pizza;
