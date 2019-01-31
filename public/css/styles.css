@@ -29,7 +29,11 @@ body {
 
 @media screen and (max-width: 600px) {
   .navbar__list {
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar__item {
+    margin: 0px!important;
   }
   .navbar__logo {
     align-self: auto;
@@ -63,7 +67,7 @@ body {
 /* MAIN BODY STYLING */
 
 .main__container  {
-  padding: 20px;
+  padding: 20px 15%;
   min-height: 400px;
   text-align: center;
   position: relative;
@@ -96,8 +100,14 @@ body {
 }
 
 .main__image {
-  width: 80%;
+  margin: auto;
+  background-image: url("../images/pizza_prep.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 80%;
   opacity: 0.5;
+  height: 40vh;
 }
 
 .main__text--aligned-left {
@@ -112,11 +122,26 @@ body {
 
 /* PIZZA LIST STYLING */
 
+.dropdown__title {
+  margin: 30px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  line-height: 30px;
+  outline: 0;
+}
+
 .pizzas__list {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+  .pizzas__list {
+    padding-left: 0px;
+  }
 }
 
 .pizzas__item {
@@ -148,7 +173,7 @@ body {
 /* PIZZA RECIPE STYLING */
 
 .pizzaDetail__description {
-  height: 40px;
+  min-height: 40px;
 }
 
 .pizzaDetail__container {
@@ -158,11 +183,28 @@ body {
   grid-template-columns: 1fr 1fr;
 }
 
+@media screen and (max-width:600px) {
+  .pizzaDetail__container {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+  .pizzaDetail__subtitle {
+    margin: auto;
+    display: block;
+    text-align: center!important;
+    padding-bottom: 10px;
+  }
+  .pizzaDetail__list, .pizzaDetail__list--position-fullrow  {
+    padding-left: 10px;;
+  }
+}
+
 .pizzaDetail__image {
   grid-column: 1 / 2;
   float: left;
-  width: 90%;
-  height: 90%;
+  max-width: 80%;
+  max-height: 80%;
   justify-self: center;
   align-self: center;
 }
@@ -205,6 +247,7 @@ body {
   margin-bottom: 10px;
   font-family: inherit;
   border: 1px solid grey;
+  width: 250px;
 }
 
 .form__button {

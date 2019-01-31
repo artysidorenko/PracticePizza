@@ -4,11 +4,13 @@
   <div class="pizzaDetail__container">
     <img class="pizzaDetail__image" src="../{{pizza.photoUrl}}" alt="{{pizza.name}} {{pizza.photoUrl}} stock photo" />
     <ul class="pizzaDetail__list pizzaDetail__list--position-right">
+      <p class="pizzaDetail__subtitle">Ingredients:</p>
       {{#each recipe.ingredients}}
       <li>{{this}}</li>
       {{/each}}
     </ul>
     <ol class="pizzaDetail__list--position-fullrow">
+      <p class="pizzaDetail__subtitle">Instructions:</p>
       {{#each recipe.instructions}}
       <li class="pizzaDetail__listitem">{{this}}</li><br />
       {{/each}}
