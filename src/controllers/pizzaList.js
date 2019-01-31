@@ -1,7 +1,10 @@
 // const pizzas = require('./../model/pizzaStatic');
 
-const pizzas = require('./../../public/pizzaStatic');
+const pizzaStatic = require('./../../public/pizzaStatic');
+const pizzaDatabase = require('./../model/pizza');
+
+const pizzaList = pizzaDatabase.listPizzas;
 
 exports.get = (req, res) => {
-  res.render('pizzaList', { pizzas });
+  res.render('pizzaList', { pizzaStatic, pizzaList });
 };

@@ -1,17 +1,39 @@
 <section class="main__container main__container--background-image">
-  <ul class="pizzas__list">
+  <details closed>
+    <summary>PracticePizza Favourites</summary>
+    <ul class="pizzas__list">
 
-    {{#each pizzas}}
+      {{#each pizzaStatic}}
 
-    <li class="pizzas__item">
-      <a href="/pizza/{{this.name}}" class="pizzas__link pizzas__item--hover">
-        <h1 class="pizzas__title">{{this.name}}</h1>
-        <p class="pizzas__description">{{this.description}}</p>
-        <img class="pizzas__image" src="{{this.photoUrl}}" alt="{{this.name}} stock photo" />
-      </a>
-    </li>
+      <li class="pizzas__item">
+        <a href="/pizza/{{this.name}}" class="pizzas__link pizzas__item--hover">
+          <h1 class="pizzas__title">{{this.name}}</h1>
+          <p class="pizzas__description">{{this.description}}</p>
+          <img class="pizzas__image" src="{{this.photoUrl}}" alt="{{this.name}} stock photo" />
+        </a>
+      </li>
 
-    {{/each}}
+      {{/each}}
 
-  </ul>
+    </ul>
+  </details>
+  <details open>
+    <summary>Your Submissions</summary>
+    <ul class="pizzas__list">
+
+      {{#each pizzaList}}
+
+      <li class="pizzas__item">
+        <a href="/pizza/{{this.name}}" class="pizzas__link pizzas__item--hover">
+          <h1 class="pizzas__title">{{this.name}}</h1>
+          <p class="pizzas__description">{{this.description}}</p>
+          <img class="pizzas__image" src="{{this.photoUrl}}" alt="{{this.name}} stock photo" />
+        </a>
+      </li>
+
+      {{/each}}
+
+    </ul>
+  </details>
+
 </section>

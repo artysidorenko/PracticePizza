@@ -1,10 +1,9 @@
 const { Pizza } = require('../model');
 
-exports.get = (req, res) => {
-  res.render('addPizza');
-};
-
-exports.post = {
+module.exports = {
+  get(req, res) {
+    res.render('addPizza');
+  },
   addPizza(req, res) {
     return Pizza
       .create({
@@ -20,3 +19,7 @@ exports.post = {
       });
   },
 };
+
+// exports.get = (req, res) => {
+//   res.render('addPizza');
+// };

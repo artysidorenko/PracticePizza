@@ -1,20 +1,33 @@
+// *****************************************************************************
+// app.js - This file is the main starting point for the Node/Express server.
+//
+// ******************************************************************************
+
+// Main dependencies
+
 const express = require('express');
-const handlebars = require('express-handlebars');
 const path = require('path');
 const bodyParser = require('body-parser');
-
-const controllers = require('./controllers/controllersIndex.js');
+const handlebars = require('express-handlebars');
 const handlebarsHelpers = require('./views/helpers/helpersIndex');
+
+// Initialise Express
 
 const app = express();
 
-app.set('port', process.env.PORT || 3000);
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'hbs');
+// Express middleware for parsing json
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
+// Express built-in automatic router for static directory
+
+app.use(express.static(path.join(__dirname, '..', 'public')));
+
+// Initialise Handlebars view builder
+
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'hbs');
 app.engine(
   'hbs',
   handlebars({
@@ -26,7 +39,16 @@ app.engine(
   }),
 );
 
+// Import Controllers
+
+const controllers = require('./controllers/controllersIndex.js');
+
+// Initialise controllers
+
 app.use(controllers);
-app.use(express.static(path.join(__dirname, '..', 'public')));
+
+// Export Express App (for use in index.js entry point)
+
+app.set('port', process.env.PORT || 3000);
 
 module.exports = app;
