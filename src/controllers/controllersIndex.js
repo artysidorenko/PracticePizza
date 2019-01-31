@@ -14,7 +14,7 @@ router.get('/pizza', pizzaList.get);
 router.get('/pizza/:pizza', pizzaDetail.get);
 router.get('/addPizza', addPizza.get);
 
-router.get('/listPizzas', pizza.listPizzas);
+// router.get('/listPizzas', pizza.listPizzas);
 
 router.post('/addPizza', pizza.addPizza);
 

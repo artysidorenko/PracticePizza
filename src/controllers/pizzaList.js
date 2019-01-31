@@ -1,10 +1,10 @@
-// const pizzas = require('./../model/pizzaStatic');
-
+const { Pizza } = require('./../model');
 const pizzaStatic = require('./../../public/pizzaStatic');
-const pizzaDatabase = require('./../model/pizza');
 
-const pizzaList = pizzaDatabase.listPizzas;
+const pizzaList = {};
 
-exports.get = (req, res) => {
-  res.render('pizzaList', { pizzaStatic, pizzaList });
-};
+pizzaList.get = (req, res) => Pizza
+  .all()
+  .then(pizzaDatabase => res.render('pizzaList', { pizzaStatic, pizzaDatabase }));
+
+module.exports = pizzaList;

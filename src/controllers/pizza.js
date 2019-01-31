@@ -15,15 +15,4 @@ module.exports = {
         console.log(error);
       });
   },
-  get(req, res) {
-    return Pizza
-      .findAll({
-        include: [{
-          model: Pizza,
-          as: 'pizzas',
-        }],
-      })
-      .then(todos => res.status(200).send(todos))
-      .catch(error => res.status(400).send(error));
-  },
 };
