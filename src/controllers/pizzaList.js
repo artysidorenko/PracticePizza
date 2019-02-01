@@ -1,10 +1,18 @@
-const { Pizza } = require('./../model');
+// *****************************************************************************
+// Controller for the pizza list page
+//
+// ******************************************************************************
+
+// Import  static information in json format (for hardcoded pizza data)
+
 const pizzaStatic = require('./../../public/pizzaStatic');
 
-const pizzaList = {};
+// Import instance of the database (for user-generated pizza data)
 
-pizzaList.get = (req, res) => Pizza
+const { Pizza } = require('./../model');
+
+// Get request from router
+
+exports.get = (req, res) => Pizza
   .all()
   .then(pizzaDatabase => res.render('pizzaList', { pizzaStatic, pizzaDatabase }));
-
-module.exports = pizzaList;

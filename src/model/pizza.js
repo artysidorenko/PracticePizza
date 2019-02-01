@@ -8,6 +8,7 @@ module.exports = (sequelize, DataTypes) => {
     description: {
       type: DataTypes.STRING,
       defaultValue: 'No description Provided',
+      allowNull: false,
     },
     ingredients: {
       type: DataTypes.STRING,

@@ -3,7 +3,6 @@ const home = require('./home');
 const about = require('./about');
 const pizzaList = require('./pizzaList');
 const addPizza = require('./addPizza');
-const pizza = require('./pizza');
 const pizzaDetail = require('./pizzaDetail');
 
 const router = express.Router();
@@ -16,6 +15,6 @@ router.get('/addPizza', addPizza.get);
 
 // router.get('/listPizzas', pizza.listPizzas);
 
-router.post('/addPizza', pizza.addPizza);
+router.post('/addPizza', addPizza.post);
 
 module.exports = router;
