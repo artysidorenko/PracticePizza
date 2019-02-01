@@ -23,7 +23,7 @@ addPizza.post = (req, res) => Pizza
     instructions: req.body.instructions,
   })
   // send response to router
-  .then(pizza => res.status(201).send(pizza))
+  .then(pizza => res.render('addSuccess', { pizza }))
   .catch((error) => {
     res.status(400).send(`there was an error: ${error}`);
     console.log(error);
