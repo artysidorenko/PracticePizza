@@ -41,7 +41,8 @@ exports.get = (req, res) => {
       res.render('pizzaDetailDb', { pizza });
     })
     .catch((error) => {
-      res.status(400).send(`there was an error: ${error}`);
+      res.render('serverError', { error });
+      // eslint-disable-next-line no-console
       console.log(error);
     });
 };

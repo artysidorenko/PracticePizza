@@ -41,11 +41,18 @@ app.engine(
 
 // Import Controllers
 
-const controllers = require('./controllers/controllersIndex.js');
+const controllers = require('./controllers/router.js');
 
-// Initialise controllers
+// Initialise controllers and middleware for handling 404 and 500 errors
 
 app.use(controllers);
+app.use((req, res) => {
+  res.status(404).render('notFoundError');
+});
+// eslint-disable-next-line no-unused-vars
+app.use((err, req, res, next) => {
+  res.status(500).render('serverError');
+});
 
 // Export Express App (for use in index.js entry point)
 
