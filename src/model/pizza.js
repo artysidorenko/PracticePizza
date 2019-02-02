@@ -34,5 +34,3 @@ module.exports = (sequelize, DataTypes) => {
   };
   return Pizza;
 };
-
-// TODO: add a column for 'author'
