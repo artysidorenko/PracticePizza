@@ -1,18 +1,28 @@
+// *****************************************************************************
+// model index.js - This file is used to initialise a Sequelize connection to
+// the SQL database
+//
+// ******************************************************************************
+
+// Main dependencies
+
 const fs = require('fs');
 const path = require('path');
 const Sequelize = require('sequelize');
+
+// Import local configuration variables
 
 const env = process.env.NODE_ENV || 'development';
 const config = require('./../config/config.json')[env];
 
 const basename = path.basename(__filename);
-
 const db = {};
 
-let sequelize;
+// Initialise Sequelize connection
 
+let sequelize;
 if (process.env.DATABASE_URL) {
-// the application is executed on Heroku ... use the postgres database
+// In this case the application is executed on Heroku ... using the user postgres database
   sequelize = new Sequelize(process.env.DATABASE_URL,
     {
       dialect: 'postgres',
@@ -28,6 +38,8 @@ if (process.env.DATABASE_URL) {
   sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
 
+// Parse js files in the current folder and import into the model
+
 fs
   .readdirSync(__dirname)
   .filter(file => (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js'))
@@ -35,6 +47,8 @@ fs
     const model = sequelize.import(path.join(__dirname, file));
     db[model.name] = model;
   });
+
+// Execute any specified associations
 
 Object.keys(db).forEach((modelName) => {
   if (db[modelName].associate) {
