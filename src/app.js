@@ -9,7 +9,7 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const handlebars = require('express-handlebars');
-const handlebarsHelpers = require('./views/helpers/helpersIndex');
+const helpers = require('./views/helpers/index');
 
 // Initialise Express
 
@@ -35,7 +35,7 @@ app.engine(
     layoutsDir: path.join(__dirname, 'views', 'layouts'),
     partialsDir: path.join(__dirname, 'views', 'partials'),
     defaultLayout: 'main',
-    handlebarsHelpers,
+    helpers,
   }),
 );
 
@@ -52,6 +52,7 @@ app.use((req, res) => {
 // eslint-disable-next-line no-unused-vars
 app.use((err, req, res, next) => {
   res.status(500).render('serverError');
+  console.log(err);
 });
 
 // Export Express App (for use in index.js entry point)

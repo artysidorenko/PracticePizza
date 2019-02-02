@@ -220,8 +220,8 @@ body {
   grid-row-gap: 20px;
 }
 
-.pizzaDetail__listitem {
-
+.pizzaDetail__input {
+  white-space: pre-wrap;
 }
 
 /* NEW PIZZA FORM STYLING */

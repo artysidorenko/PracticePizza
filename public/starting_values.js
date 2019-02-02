@@ -1,6 +1,8 @@
-module.exports = [
+const startingValues = [
   {
     name: 'Margherita',
+    description: 'A typical Neapolitan pizza, made with tomatoes, mozzarella and basil.',
+    img: './images/Pizza_Margherita.jpg',
     ingredients: [
       '300g strong bread flour',
       '125g ball mozzarella, sliced',
@@ -12,16 +14,18 @@ module.exports = [
       '1 garlic clove, crushed',
       'handful grated or shaved parmesan',
       'handful cherry tomatoes, halved',
-    ],
+    ].join('.\n'),
     instructions: [
       'Make the base: Put the flour into a large bowl, then stir in the yeast and salt. Make a well, pour in 200ml warm water and the olive oil and bring together with a wooden spoon until you have a soft, fairly wet dough. Turn onto a lightly floured surface and knead for 5 mins until smooth. Cover with a tea towel and set aside. You can leave the dough to rise if you like, but it’s not essential for a thin crust.',
       'Make the sauce: Mix the passata, basil and crushed garlic together, then season to taste. Leave to stand at room temperature while you get on with shaping the base.',
       'Roll out the dough: If you’ve let the dough rise, give it a quick knead, then split into two balls. On a floured surface, roll out the dough into large rounds, about 25cm across, using a rolling pin. The dough needs to be very thin as it will rise in the oven. Lift the rounds onto two floured baking sheets.',
       'Top and bake: Heat oven to 240C/fan 220C /gas 8. Put another baking sheet or an upturned baking tray in the oven on the top shelf. Smooth sauce over bases with the back of a spoon. Scatter with cheese and tomatoes, drizzle with olive oil and season. Put one pizza, still on its baking sheet, on top of the preheated sheet or tray. Bake for 8-10 mins until crisp. Serve with a little more olive oil, and basil leaves if using. Repeat step for remaining pizza',
-    ],
+    ].join('.\n'),
   },
   {
     name: 'Marinara',
+    description: 'A style of Neapolitan pizza prepared with plain marinara sauce and seasoned with oregano and garlic, very similar to a Pizza Margherita, without the typical Mozzarella or other cheeses.',
+    img: './images/512px-Pizza_marinara_(Napoli).jpg',
     ingredients: [
       '1 garlic clove',
       'All-purpose flour for dusting',
@@ -29,16 +33,18 @@ module.exports = [
       '1/2 cup Pizza Sauce',
       '1 pinch dried oregano, crumbled',
       '1 tbsp extra-virgin olive oil',
-    ],
+    ].join('.\n'),
     instructions: [
       'At least 45 minutes before baking pizza, put a pizza stone or 4 to 6 unglazed "quarry" tiles arranged close together on oven rack in lowest position in oven and preheat oven to highest setting (500°F-550°F).',
       'Thinly slice garlic. On a lightly floured surface pat out dough evenly with your fingers, keeping hands flat and lifting and turning dough over several times, into a 9-inch round. (Do not handle dough more than necessary. If dough is sticky, dust it lightly with flour.)',
       'Dust a baker\'s peel or rimless baking sheet with flour and carefully transfer dough to it. Jerk peel or baking sheet once or twice and, if dough is sticking, lift dough and sprinkle flour underneath it, reshaping dough if necessary. Working quickly, top dough with sauce, spreading with back of a spoon to within 1/2 inch of edge. Scatter garlic and oregano over sauce and drizzle with oil.',
       'Line up far edge of peel or baking sheet with far edge of stone or tiles and tilt peel or baking sheet, jerking it gently to start pizza moving. Once edge of pizza touches stone or tiles, carefully pull back peel or baking sheet, completely transferring pizza to stone or tiles (do not move pizza). Bake pizza 6 to 7 minutes, or until dough is crisp and browned, and transfer with a metal spatula to a cutting board.',
-    ],
+    ].join('.\n'),
   },
   {
     name: 'Frutti di Mare',
+    description: 'An Italian type of pizza that may be served with scampi, mussels or squid: it typically lacks cheese, with the seafood being served atop a tomato sauce.',
+    img: './images/Pizza_frutti_di_mare_(4304747624).jpg',
     ingredients: [
       '10 clams (vongole), rinsed well and kept in the fridge in a bowl of cold salted water',
       '6 green tiger prawns peeled, deveined',
@@ -53,7 +59,7 @@ module.exports = [
       '1-2 tbs finely chopped flat-leaf parsley stalks',
       '150ml white wine',
       '400g can crushed tomatoes',
-    ],
+    ].join('.\n'),
     instructions: [
       'Combine the yeast with sugar and 220ml warm water in a bowl and stand for 5 minutes or until frothy. Place the flours in a large mixing bowl, pour in the yeast mixture and knead until combined, then add 2 tsp salt. Turn out onto a floured work surface and knead vigorously for up to 10 minutes or until dough is smooth, shiny and elastic. Add a little water if the dough feels too dry, but keep in mind that the more you knead it, the softer it becomes. (Alternatively, place the flours in the bowl of a stand mixer fitted with a dough hook, pour in the yeast mixture and let the machine work the dough on speed 1 for the first 2 minutes. Increase to speed 2 for 3-5 minutes, then work for 30 seconds on the highest setting.) Tip the dough onto a floured surface, cover with a tea towel and rest for 30 minutes.',
       'Stretch the dough with floured hands into a rectangle, then fold into 3 and shape into a ball. Place in an oiled container fitted with a lid. Make sure you use a large container that will allow room for rising. Rest the container in the fridge overnight (or for up to 3 days) to prove and develop flavour and texture.',
@@ -63,10 +69,12 @@ module.exports = [
       'Divide the dough into 2 pieces and roll out the dough to a thickness of about 4mm, using either a floured rolling pin or your hands. If baking on a stone, place the dough on a sheet of baking paper. Otherwise, put the dough on a large baking tray lined with baking paper (you may need to use two trays, depending on the size of your oven). Spread the tomato base onto the dough and drizzle an extra 1-2 tbs olive oil all over the pizza.',
       'If using a baking stone, sprinkle the stone with semolina, then place the pizza (still on its baking paper lining) on the hot stone. Bake for 15 minutes.',
       'Meanwhile, rinse the clams again and drain them well. Gently open the door, peel the paper off the pizza base and add the seafood. Bake for a further 5-8 minutes until the base is golden and slightly scorched, the shells have opened and the prawns are just cooked through. Serve immediately with a sprinkling of parsley leaves and a drizzle of extra virgin olive oil. (If you are using a baking tray, place the tray in the hot oven and bake for 15 minutes. Add the seafood and bake as above.)',
-    ],
+    ].join('.\n'),
   },
   {
     name: 'Quattro Stagioni',
+    description: 'A popular Italian style pizza prepared with various ingredients in four sections, with each section representing a season of the year.',
+    img: './images/640px-Pizza_quattro_stagioni.jpg',
     ingredients: [
       '2 Tbs. extra-virgin olive oil, plus more for brushing',
       '1/4 lb. (125 g) cremini mushrooms, thinly sliced',
@@ -78,12 +86,14 @@ module.exports = [
       '1 jar (5 oz./155 g) marinated artichoke hearts, drained and quartered',
       '1/4 lb. (125 g) thinly sliced prosciutto',
       'Grated Parmesan cheese for serving',
-    ],
+    ].join('.\n'),
     instructions: [
       'Prepare a hot fire in a gas grill, leaving the center burner on medium-low heat. Lightly brush a steel grill pizza pan with olive oil.',
       'In a small fry pan over medium-high heat, warm the 2 Tbs. olive oil. Add the mushrooms and sauté until golden brown and tender, about 6 minutes. Season with salt and pepper. Set aside to cool.',
       'On a lightly floured surface, roll out the pizza dough into a 12-inch (30-cm) round and transfer to the prepared pizza pan. Spread the pizza sauce evenly on the dough, leaving a 1/2-inch (12-mm) border uncovered. Sprinkle the mozzarella evenly on top of the sauce. Arrange the toppings in separate quadrants of the pizza: the mushrooms on one quarter, the olives on another, the artichoke hearts on another and the prosciutto on the final quarter.',
       'Place the pizza pan in the center of the grill and cover the grill. Cook until the crust is crisp and well browned and the cheese is melted, 6 to 7 minutes. Transfer the pizza to a cutting board and brush the crust lightly with olive oil. Sprinkle the pizza with Parmesan, cut into slices and serve immediately.',
-    ],
+    ].join('.\n'),
   },
 ];
+
+module.exports = startingValues;

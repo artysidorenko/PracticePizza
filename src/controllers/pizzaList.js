@@ -3,11 +3,7 @@
 //
 // ******************************************************************************
 
-// Import  static information in json format (for hardcoded pizza data)
-
-const pizzaStatic = require('./../../public/pizzaStatic');
-
-// Import instance of the database (for user-generated pizza data)
+// Import instance of the database
 
 const { Pizza } = require('./../model');
 
@@ -15,4 +11,4 @@ const { Pizza } = require('./../model');
 
 exports.get = (req, res) => Pizza
   .all()
-  .then(pizzaDatabase => res.render('pizzaList', { pizzaStatic, pizzaDatabase }));
+  .then(pizzaDatabase => res.render('pizzaList', { pizzaDatabase }));

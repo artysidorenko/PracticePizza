@@ -3,17 +3,17 @@
     <summary class="dropdown__title" >PracticePizza Favourites</summary>
     <ul class="pizzas__list">
 
-      {{#each pizzaStatic}}
+      {{#each pizzaDatabase}}{{#if admin}}
 
       <li class="pizzas__item">
         <a href="/pizza/{{this.name}}" class="pizzas__link pizzas__item--hover">
           <h1 class="pizzas__title">{{this.name}}</h1>
           <p class="pizzas__description">{{this.description}}</p>
-          <img class="pizzas__image" src="{{this.photoUrl}}" alt="{{this.name}} stock photo" />
+          <img class="pizzas__image" src="{{this.img}}" alt="{{this.name}} stock photo" />
         </a>
       </li>
 
-      {{/each}}
+      {{/if}}{{/each}}
 
     </ul>
   </details>
@@ -21,17 +21,18 @@
     <summary class="dropdown__title" >Your Submissions</summary>
     <ul class="pizzas__list">
 
-      {{#each pizzaDatabase}}
+      {{#each pizzaDatabase}}{{#unless admin}}
 
       <li class="pizzas__item">
         <a href="/pizza/{{this.name}}" class="pizzas__link pizzas__item--hover">
           <h1 class="pizzas__title">{{this.name}}</h1>
           <p class="pizzas__description">{{this.description}}</p>
           <img class="pizzas__image" src="./images/pizzasymbol.png" alt="{{this.name}} photo" />
+          <p class="pizzas__description">Submitted by: {{this.author}}</p>
         </a>
       </li>
 
-      {{/each}}
+      {{/unless}}{{/each}}
 
     </ul>
   </details>

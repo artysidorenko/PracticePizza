@@ -7,13 +7,19 @@ const getRoutes = [
     name: 'home',
     path: '/',
     mimeType: /html/,
-    testString: /HOME/,
+    testString: /Welcome/,
   },
   {
-    name: 'pizza',
+    name: 'pizza list',
     path: '/pizza',
     mimeType: /html/,
-    testString: /Pizza Details/,
+    testString: /PracticePizza/,
+  },
+  {
+    name: 'add pizza',
+    path: '/addPizza/',
+    mimeType: /html/,
+    testString: /form/,
   },
 ];
 /* eslint-disable */
@@ -35,3 +41,5 @@ describe('Contoller', () => {
     });
   });
 });
+
+// TODO: complete testing suite including sequelize

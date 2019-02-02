@@ -7,7 +7,6 @@ module.exports = (sequelize, DataTypes) => {
     },
     description: {
       type: DataTypes.STRING,
-      defaultValue: 'No description Provided',
       allowNull: false,
     },
     ingredients: {
@@ -18,6 +17,16 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    author: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    img: {
+      type: DataTypes.STRING,
+    },
+    admin: {
+      type: DataTypes.BOOLEAN,
+    },
   }, {});
   /* eslint-disable-next-line no-unused-vars */
   Pizza.associate = (models) => {
@@ -25,3 +34,5 @@ module.exports = (sequelize, DataTypes) => {
   };
   return Pizza;
 };
+
+// TODO: add a column for 'author'

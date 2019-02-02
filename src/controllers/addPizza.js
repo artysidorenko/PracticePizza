@@ -21,6 +21,7 @@ addPizza.post = (req, res) => Pizza
     description: req.body.description,
     ingredients: req.body.ingredients,
     instructions: req.body.instructions,
+    author: req.body.author,
   })
   // send response to router
   .then(pizza => res.render('addSuccess', { pizza }))

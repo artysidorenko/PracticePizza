@@ -1,3 +1,4 @@
+// WARNING THIS MIGRATION IS HEAVILY OUTDATES!!!
 
 module.exports = {
   up: (queryInterface, Sequelize) => queryInterface.createTable('Pizzas', {
