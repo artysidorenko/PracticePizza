@@ -1,10 +1,10 @@
 <section class="main__container main__container--background-image">
   <h1 class="pizzas__title">{{pizza.name}}</h1>
-  {{#unless admin}}<p class="pizzaDetail__description">Submitted by: {{pizza.author}}</p>{{/unless}}
+  {{#unless pizza.admin}}<p class="pizzaDetail__description">Submitted by: {{pizza.author}}</p>{{/unless}}
   <p class="pizzaDetail__description">{{pizza.description}}</p>
   <div class="pizzaDetail__container">
-    {{#if admin}}<img class="pizzaDetail__image" src="../{{pizza.img}}" alt="{{pizza.name}} stock photo" />{{/if}}
-    {{#unless admin}}<img class="pizzaDetail__image" src="../images/pizzasymbol.png" alt="{{pizza.name}} stock photo" />{{/unless}}
+    {{#if pizza.admin}}<img class="pizzaDetail__image" src="../{{pizza.img}}" alt="{{pizza.name}} stock photo" />{{/if}}
+    {{#unless pizza.admin}}<img class="pizzaDetail__image" src="../images/pizzasymbol.png" alt="{{pizza.name}} stock photo" />{{/unless}}
     <div class="pizzaDetail__list pizzaDetail__list--position-right">
       <p class="pizzaDetail__subtitle">Ingredients:</p>
       <p class="pizzaDetail__input">{{paragraph pizza.ingredients}}</p>
